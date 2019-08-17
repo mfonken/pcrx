@@ -4,6 +4,18 @@
 #endif
 /** SOURCE: http://preview.tinyurl.com/9djhrem */
 
+const struct rho_kalman RhoKalman =
+{
+    InitializeRhoKalman,
+    ResetRhoKalman,
+    PredictRhoKalman,
+    UpdateRhoKalman,
+    StepRhoKalman,
+    IsRhoKalmanExpired,
+    ScoreRhoKalman,
+    PunishRhoKalman
+};
+
 void InitializeRhoKalman( rho_kalman_t * k, floating_t v, floating_t ls, index_t minv, index_t maxv, rho_kalman_uncertainty_c uncertainty )
 {
     k->lifespan    = ls;

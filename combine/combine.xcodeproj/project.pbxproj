@@ -13,7 +13,6 @@
 		340196A922FE780600F152CC /* file_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3401965D22FE780600F152CC /* file_writer.cpp */; };
 		340196AB22FE780600F152CC /* kalman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3401966122FE780600F152CC /* kalman.cpp */; };
 		340196AE22FE780600F152CC /* image_utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3401966A22FE780600F152CC /* image_utility.cpp */; };
-		340196AF22FE780600F152CC /* timestamp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3401966F22FE780600F152CC /* timestamp.c */; };
 		340196B022FE780600F152CC /* environment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3401967322FE780600F152CC /* environment.cpp */; };
 		340196B122FE780600F152CC /* rho_pid.c in Sources */ = {isa = PBXBuildFile; fileRef = 3401967A22FE780600F152CC /* rho_pid.c */; };
 		340196B222FE780600F152CC /* rho_kalman.c in Sources */ = {isa = PBXBuildFile; fileRef = 3401967E22FE780600F152CC /* rho_kalman.c */; };
@@ -39,6 +38,7 @@
 		340196FA22FF57E500F152CC /* statistics.c in Sources */ = {isa = PBXBuildFile; fileRef = 340196F922FF57E500F152CC /* statistics.c */; };
 		3455398B22FF62F200DDE874 /* combine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3455398922FF62F200DDE874 /* combine.cpp */; };
 		349A5D8D22FF85E200060F4C /* unfisheye.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 349A5D8C22FF85E100060F4C /* unfisheye.cpp */; };
+		34DA3EE62308A49700B312BC /* timestamp.c in Sources */ = {isa = PBXBuildFile; fileRef = 34DA3EE52308A49700B312BC /* timestamp.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -70,7 +70,6 @@
 		3401966A22FE780600F152CC /* image_utility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = image_utility.cpp; sourceTree = "<group>"; };
 		3401966B22FE780600F152CC /* image_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image_config.h; sourceTree = "<group>"; };
 		3401966C22FE780600F152CC /* image_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image_types.h; sourceTree = "<group>"; };
-		3401966F22FE780600F152CC /* timestamp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = timestamp.c; sourceTree = "<group>"; };
 		3401967022FE780600F152CC /* timestamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timestamp.h; sourceTree = "<group>"; };
 		3401967322FE780600F152CC /* environment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = environment.cpp; sourceTree = "<group>"; };
 		3401967422FE780600F152CC /* environment_master.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = environment_master.h; sourceTree = "<group>"; };
@@ -138,6 +137,7 @@
 		3455398A22FF62F200DDE874 /* combine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = combine.hpp; sourceTree = "<group>"; };
 		349A5D8B22FF85E100060F4C /* unfisheye.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = unfisheye.hpp; sourceTree = "<group>"; };
 		349A5D8C22FF85E100060F4C /* unfisheye.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unfisheye.cpp; sourceTree = "<group>"; };
+		34DA3EE52308A49700B312BC /* timestamp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = timestamp.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,7 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				3401967022FE780600F152CC /* timestamp.h */,
-				3401966F22FE780600F152CC /* timestamp.c */,
+				34DA3EE52308A49700B312BC /* timestamp.c */,
 			);
 			path = time;
 			sourceTree = "<group>";
@@ -465,6 +465,7 @@
 				340196B022FE780600F152CC /* environment.cpp in Sources */,
 				349A5D8D22FF85E200060F4C /* unfisheye.cpp in Sources */,
 				340196AB22FE780600F152CC /* kalman.cpp in Sources */,
+				34DA3EE62308A49700B312BC /* timestamp.c in Sources */,
 				340196B222FE780600F152CC /* rho_kalman.c in Sources */,
 				340196BC22FE780600F152CC /* tau_drawer.cpp in Sources */,
 				340196B122FE780600F152CC /* rho_pid.c in Sources */,
@@ -474,7 +475,6 @@
 				3455398B22FF62F200DDE874 /* combine.cpp in Sources */,
 				340196F522FE81E500F152CC /* vector.c in Sources */,
 				340196F722FE81E500F152CC /* quaternion.c in Sources */,
-				340196AF22FE780600F152CC /* timestamp.c in Sources */,
 				340196C422FE7D5900F152CC /* detection_map.c in Sources */,
 				3401964C22FE77E300F152CC /* main.cpp in Sources */,
 				340196FA22FF57E500F152CC /* statistics.c in Sources */,

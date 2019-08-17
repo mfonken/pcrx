@@ -83,23 +83,7 @@ extern "C" {
     void UpdateFSMProbabilities(  fsm_system_t *,    double[4] );
     void UpdateFSMState(          fsm_system_t *               );
     
-    static const fsm_functions_t FSMFunctions =
-    {
-        { /* Map functions */
-            .Initialize             = InitializeFSMMap,
-            .Normalize              = NormalizeFSMMap,
-            .NormalizeState         = NormalizeFSMState,
-            .ResetState             = ResetFSMState,
-            .Print                  = PrintFSMMap
-        },
-        { /* System functions */
-            .Initialize             = InitializeFSMSystem,
-            .DecayInactive          = DecayInactiveFSMSystem,
-            .Update                 = UpdateFSMSystem,
-            .UpdateProbabilities    = UpdateFSMProbabilities,
-            .UpdateState            = UpdateFSMState
-        }
-    };
+    extern const fsm_functions_t FSMFunctions;
     
     static inline void copymax(double * a, double * b) { if(*a>*b)*b=*a;else*a=*b; }
     

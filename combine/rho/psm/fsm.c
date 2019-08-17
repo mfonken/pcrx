@@ -8,6 +8,24 @@
 
 #include "fsm.h"
 
+const fsm_functions_t FSMFunctions =
+{
+    { /* Map functions */
+        InitializeFSMMap,
+        NormalizeFSMMap,
+        NormalizeFSMState,
+        ResetFSMState,
+        PrintFSMMap
+    },
+    { /* System functions */
+        InitializeFSMSystem,
+        DecayInactiveFSMSystem,
+        UpdateFSMProbabilities,
+        UpdateFSMState,
+        UpdateFSMSystem
+    }
+};
+
 typedef define_loop_variable_template_struct(uint8_t, state_global_t);
 state_global_t _;
 

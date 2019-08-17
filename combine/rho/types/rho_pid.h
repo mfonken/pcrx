@@ -53,12 +53,7 @@ extern "C" {
     void RhoPIDUpdate( rho_pid_t *, floating_t, floating_t );
     void RhoPIDPrint( rho_pid_t * );
     
-    static const rho_pid_functions RhoPID =
-    {
-        .Initialize = RhoPIDInitialize,
-        .Update = RhoPIDUpdate,
-        .Print = RhoPIDPrint
-    };
+    extern const rho_pid_functions RhoPID;
     
 #ifdef __cplusplus
 }

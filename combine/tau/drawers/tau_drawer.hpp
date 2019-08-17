@@ -10,6 +10,7 @@
 #define tau_test_hpp
 
 #include "tau_structures.hpp"
+#include "timestamp.h"
 #include "opencv_master.h"
 #include "tau_utility.hpp"
 

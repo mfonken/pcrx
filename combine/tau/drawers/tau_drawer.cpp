@@ -119,7 +119,7 @@ rho_detection_y(Size(DETECTION_FRAME_WIDTH, height), CV_8UC3, Scalar(0,0,0))
     file.close();
     pthread_mutex_init( &drawer_mutex, NULL );
     
-    timestamp = now();
+    timestamp = TIMESTAMP();
     frame_rate_counter = frame_rate_display_delay;
 }
 
@@ -207,7 +207,7 @@ void TauDrawer::GetDensitiesFrame( Mat& M )
     putText(M, "o", Point(rho.core.Primary.x-9, rho.core.Primary.y+12), FONT_HERSHEY_PLAIN, 2, orangish, 4);
     putText(M, "o", Point(rho.core.Secondary.x-9, rho.core.Secondary.y+12), FONT_HERSHEY_PLAIN, 2, orangish, 4);
     
-    double dnow = now();
+    double dnow = TIMESTAMP();
     rectangle(M, Point(W-SIDEBAR_WIDTH,H-SIDEBAR_WIDTH*2), Point(W,H), Scalar(0,0,0), FILLED);
     if(--frame_rate_counter == 0)
     {

@@ -8,6 +8,14 @@
 #define BURN_ROWS 0
 #define BURN_COLS 0
 
+const rho_interrupts RhoInterrupts =
+{
+    RIM_INIT_FROM_CORE,
+    RIM_FRAME_START,
+    RIM_FRAME_END,
+    RIM_PERFORM_RHO_FUNCTION
+};
+
 rho_variables RhoVariables = { 0 };
 
 void RIM_INIT_FROM_CORE( rho_core_t * core )

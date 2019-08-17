@@ -33,13 +33,7 @@ extern "C" {
         void (*FRAME_END)(   void );
         void (*RHO_FUNCTION)( const cimage_t );
     };
-    static const rho_interrupts RhoInterrupts =
-    {
-        .INIT_FROM_CORE = RIM_INIT_FROM_CORE,
-        .FRAME_START = RIM_FRAME_START,
-        .FRAME_END   = RIM_FRAME_END,
-        .RHO_FUNCTION = RIM_PERFORM_RHO_FUNCTION
-    };
+    extern const rho_interrupts RhoInterrupts;
 
     typedef struct
     {

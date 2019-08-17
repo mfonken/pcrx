@@ -8,6 +8,69 @@
  ***********************************************************************/
 #include "rho_utility.h"
 
+const rho_utility_functions RhoUtility =
+{
+    {
+        InitializeDataRhoUtility,
+        InitializeFiltersRhoUtility,
+        InitializePredictionRhoUtility,
+        InitializeDensityMapRhoUtility
+    },
+    
+    {
+        ResetForDetectRhoUtility,
+        ResetForPredictionRhoUtility,
+        ResetDensityMapPairKalmansRhoUtility
+    },
+    
+    {
+        PredictPeakFilterRhoUtility,
+        PredictTrackingFiltersRhoUtility,
+        CalculateValidTracksRhoUtility,
+        SortTrackingFiltersRhoUtility,
+        PredictTrackingProbabilitiesRhoUtility,
+        CorrectPredictionAmbiguityRhoUtility,
+        CombineAxisProbabilitesRhoUtility,
+        RedistributeDensitiesRhoUtility,
+        UpdateCorePredictionDataRhoUtility,
+        GenerateObservationListFromPredictionsRhoUtility,
+        GenerateObservationListsFromPredictionsRhoUtility,
+        UpdatePredictiveStateModelPairRhoUtility
+    },
+    
+    {
+        PerformDetectRhoUtility,
+        CalculateBandLowerBoundRhoUtility,
+        DetectRegionsRhoUtility,
+        DetectRegionRhoUtility,
+        SubtractBackgroundForDetectionRhoUtility,
+        CalculateChaosRhoUtility,
+        ScoreRegionsRhoUtility,
+        SortRegionsRhoUtility,
+        CalculatedFrameStatisticsRhoUtility
+    },
+    
+    {
+        CalculateTuneRhoUtility,
+        CalculateBackgroundTuneFactorRhoUtility,
+        CalculateStateTuneFactorRhoUtility,
+        CalculateTargetTuneFactorRhoUtility,
+        CalculateTargetCoverageFactorRhoUtility
+    },
+    
+    {
+        GenerateCumulativeMomentsStatistics,
+        GenerateRegionScoreRhoUtility,
+        GenerateCentroidRhoUtility,
+        GeneratePacketRhoUtility,
+        GenerateBackgroundRhoUtility
+    },
+    
+    {
+        PrintPacketRhoUtility
+    }
+};
+
 /************************************************************************
  *                       Function Definitions                           *
  ***********************************************************************/

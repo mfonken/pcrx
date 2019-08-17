@@ -4,7 +4,7 @@
 
 //#define TIMELESS
 
-floating_t now()
+floating_t TIMESTAMP()
 {
     struct timeval stamp;
     gettimeofday(&stamp, NULL);
@@ -50,12 +50,12 @@ void KalmanFilter::update( floating_t value_new, floating_t rate_new )
 #ifdef TIMELESS
     //    floating_t delta_time = 0.25;
 #else
-    floating_t delta_time = now() - timestamp;
+    floating_t delta_time = TIMESTAMP() - timestamp;
     
     /* Quick expiration check */
     if(delta_time > lifespan)
     {
-        timestamp = now();
+        timestamp = TIMESTAMP();
         return;
     }
 #endif
@@ -83,7 +83,7 @@ void KalmanFilter::update( floating_t value_new, floating_t rate_new )
     P[1][0] -= K[1] * P[0][0];
     P[1][1] -= K[1] * P[0][1];
     
-    timestamp = now();
+    timestamp = TIMESTAMP();
 };
 
 void KalmanFilter::copyTo(KalmanFilter * k)
@@ -116,6 +116,6 @@ std::string KalmanFilter::toString()
 
 int KalmanFilter::isExpired()
 {
-    return ((now() - timestamp) > lifespan);
+    return ((TIMESTAMP() - timestamp) > lifespan);
 }
 

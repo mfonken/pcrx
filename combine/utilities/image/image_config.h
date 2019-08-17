@@ -9,7 +9,7 @@
 #ifndef image_config_h
 #define image_config_h
 
-#include "test_config.h"
+#include "../../combine/test_config.h"
 
 #define IMAGE_ROOT              FRAME_IMAGE_ROOT
 

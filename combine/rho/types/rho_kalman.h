@@ -68,17 +68,7 @@ extern "C" {
         void (*     Punish)( rho_kalman_t * );
     };
     
-    static const struct rho_kalman RhoKalman =
-    {
-        .Initialize = InitializeRhoKalman,
-        .Reset = ResetRhoKalman,
-        .Predict = PredictRhoKalman,
-        .Update = UpdateRhoKalman,
-        .Step = StepRhoKalman,
-        .IsExpired = IsRhoKalmanExpired,
-        .Score = ScoreRhoKalman,
-        .Punish = PunishRhoKalman
-    };
+    extern const struct rho_kalman RhoKalman;
     
 #ifdef __cplusplus
 }

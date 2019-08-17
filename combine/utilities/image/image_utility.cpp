@@ -161,14 +161,13 @@ void ImageUtility::RequestBackground()
 
 void ImageUtility::Trigger()
 {
-    preoutframe = {0};
+    preoutframe = Scalar(0,0,0);
     if(!single_frame)
         ++counter;
     if(has_file)
         preoutframe = GetNextImage();
     else if(has_camera)
         preoutframe = GetNextFrame();
-    else preoutframe = { 0 };
     
     if(has_generator)
         GenerateImage(preoutframe);
@@ -341,7 +340,7 @@ void DrawPosition(double x, double y, double z)
 void ImageUtility::GenerateImage(Mat& M)
 {
     path_tick = counter % path_num_ticks;
-    if( !has_file && !has_camera ) frame = {0};
+    if( !has_file && !has_camera ) frame = Scalar(0,0,0);
     
     switch(noise)
     {

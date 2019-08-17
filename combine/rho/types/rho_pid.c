@@ -11,6 +11,13 @@
 #include "timestamp.h"
 #endif
 
+const rho_pid_functions RhoPID =
+{
+    RhoPIDInitialize,
+    RhoPIDUpdate,
+    RhoPIDPrint
+};
+
 void RhoPIDInitialize( rho_pid_t * PID, rho_pid_gain_t K )
 {
     /* Zero Entire PID */

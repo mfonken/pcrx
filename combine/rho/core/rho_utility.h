@@ -171,54 +171,7 @@ extern "C" {
 /************************************************************************
  *                         Local Instance                               *
  ***********************************************************************/
-    static const rho_utility_functions RhoUtility =
-    {
-        .Initialize.Data = InitializeDataRhoUtility,
-        .Initialize.Filters = InitializeFiltersRhoUtility,
-        .Initialize.Prediction = InitializePredictionRhoUtility,
-        .Initialize.DensityMap = InitializeDensityMapRhoUtility,
-
-        .Reset.Detect = ResetForDetectRhoUtility,
-        .Reset.Prediction = ResetForPredictionRhoUtility,
-        .Reset.DensityMapPairKalmans = ResetDensityMapPairKalmansRhoUtility,
-
-        .Predict.PeakFilter = PredictPeakFilterRhoUtility,
-        .Predict.TrackingFilters = PredictTrackingFiltersRhoUtility,
-        .Predict.CalculateValidTracks = CalculateValidTracksRhoUtility,
-        .Predict.SortFilters = SortTrackingFiltersRhoUtility,
-        .Predict.TrackingProbabilities = PredictTrackingProbabilitiesRhoUtility,
-        .Predict.CorrectAmbiguity = CorrectPredictionAmbiguityRhoUtility,
-        .Predict.CombineProbabilities = CombineAxisProbabilitesRhoUtility,
-        .Predict.RedistributeDensities = RedistributeDensitiesRhoUtility,
-        .Predict.UpdateCorePredictionData = UpdateCorePredictionDataRhoUtility,
-        .Predict.GenerateObservationList = GenerateObservationListFromPredictionsRhoUtility,
-        .Predict.GenerateObservationLists = GenerateObservationListsFromPredictionsRhoUtility,
-        .Predict.UpdatePredictiveStateModelPair = UpdatePredictiveStateModelPairRhoUtility,
-
-        .Detect.Perform = PerformDetectRhoUtility,
-        .Detect.LowerBound = CalculateBandLowerBoundRhoUtility,
-        .Detect.Regions = DetectRegionsRhoUtility,
-        .Detect.Region = DetectRegionRhoUtility,
-        .Detect.SubtractBackground = SubtractBackgroundForDetectionRhoUtility,
-        .Detect.CalculateChaos = CalculateChaosRhoUtility,
-        .Detect.ScoreRegions = ScoreRegionsRhoUtility,
-        .Detect.SortRegions = SortRegionsRhoUtility,
-        .Detect.CalculateFrameStatistics = CalculatedFrameStatisticsRhoUtility,
-
-        .Calculate.Tune = CalculateTuneRhoUtility,
-        .Calculate.BackgroundTuneFactor = CalculateBackgroundTuneFactorRhoUtility,
-        .Calculate.StateTuneFactor = CalculateStateTuneFactorRhoUtility,
-        .Calculate.TargetTuneFactor = CalculateTargetTuneFactorRhoUtility,
-        .Calculate.TargetCoverageFactor = CalculateTargetCoverageFactorRhoUtility,
-        
-        .Generate.CumulativeMoments = GenerateCumulativeMomentsStatistics,
-        .Generate.RegionScore = GenerateRegionScoreRhoUtility,
-        .Generate.Centroid = GenerateCentroidRhoUtility,
-        .Generate.Packet = GeneratePacketRhoUtility,
-        .Generate.Background = GenerateBackgroundRhoUtility,
-        
-        .Print.Packet = PrintPacketRhoUtility,
-    };
+    extern const rho_utility_functions RhoUtility;
 
 #ifdef __cplusplus
 }
